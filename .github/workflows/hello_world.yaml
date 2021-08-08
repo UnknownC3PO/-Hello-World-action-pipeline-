@@ -25,5 +25,5 @@ jobs:
       run: print("Hello World")
       shell: python
     - name: HELLO WORLD!
-      uses: ./hello_world
+      uses: actions/python-helloworld-action@v0.0.1
     
