@@ -24,3 +24,10 @@ jobs:
     - name: Hello World!
       run: |
         python ./hello_world.py
+    - name: Delpoy AWS
+      uses: appleboy/lambda-action@master
+      with:
+        aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID}}
+        aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws_region: ua-east-2
+        function_name: Hello_World 
