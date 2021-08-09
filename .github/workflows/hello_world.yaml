@@ -22,8 +22,5 @@ jobs:
       run: |
         python -m pip install --upgrade pip
     - name: Hello World!
-      run: print("Hello World")
-      shell: python
-    - name: HELLO WORLD!
-      uses: actions/python-helloworld-action@v0.0.1
-    
+      run: |
+        python ./hello_world.py
