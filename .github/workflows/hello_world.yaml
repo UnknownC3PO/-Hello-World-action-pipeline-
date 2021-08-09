@@ -24,8 +24,8 @@ jobs:
     - name: Hello World!
       run: |
         python ./hello_world.py
-    - name: Delpoy AWS
-      uses: appleboy/lambda-action@master
+    - name: Deploy Lambda
+      uses: Wealize/deploy-lambda@v0.1.11
       with:
         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID}}
         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
