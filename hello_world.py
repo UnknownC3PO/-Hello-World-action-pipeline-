@@ -1,2 +1,2 @@
 def lambda_handler(event,context):
-  return 'Hello aws'
+  return 'Hello AWS'
