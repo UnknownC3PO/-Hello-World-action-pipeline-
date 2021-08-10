@@ -34,7 +34,7 @@ jobs:
         source: hello_world.py
         memory_size: 128
         timeout: 10
-        handler: lambda_handler
+        handler: hello_world.lambda_handler
         role: arn:aws:iam::296473292664:role/service-role/Hello_World-role-gqo1q382
         runtime: python3.8  
 
