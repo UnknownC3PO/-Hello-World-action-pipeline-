@@ -56,7 +56,7 @@ jobs:
     - name: AWS Lambda Deploy
       uses: appleboy/lambda-action@v0.0.4
       with:
-            #name of my AWS Lambda Function
+
             function_name: Hello_World
             #contains all the files in my github repository
             zip_file: test-dep-vev.zip
