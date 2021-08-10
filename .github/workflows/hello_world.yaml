@@ -21,7 +21,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-    - name: Hello World!
+    - name: Hello World
       run: 
         python ./hello_world.py
     - name: aws_cred
