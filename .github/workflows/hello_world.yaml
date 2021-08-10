@@ -23,7 +23,7 @@ jobs:
         python -m pip install --upgrade pip
     - name: Hello World
       run:
-        zip ./hello_world.py
+        zip -r ./NewFolder
     - name: aws_cred
       uses: appleboy/lambda-action@master
       with:
