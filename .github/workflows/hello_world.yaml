@@ -23,12 +23,18 @@ jobs:
         python -m pip install --upgrade pip
     - name: Hello World
       run:
-        python ./hello_world.py
+        zip ./hello_world.py
     - name: aws_cred
       uses: appleboy/lambda-action@master
       with:
         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID}}
         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws_region: us-east-2
-        function_name: somethingfunc
+        function_name: Hello_World
+        zip_file: NewFolder
+        memory_size: 128
+        timeout: 10
+        handler: lambda_handler
+        role: arn:aws:iam::296473292664:role/service-role/Hello_World-role-gqo1q382
+        runtime: python3.8  
 
