@@ -23,7 +23,7 @@ jobs:
         python -m pip install --upgrade pip
     - name: Hello World
       run:
-        zip -r ./NewFolder
+            python ./hello_world.py
     - name: aws_cred
       uses: appleboy/lambda-action@master
       with:
@@ -31,7 +31,7 @@ jobs:
         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws_region: us-east-2
         function_name: Hello_World
-        zip_file: NewFolder
+        zip_file: hello_world
         memory_size: 128
         timeout: 10
         handler: lambda_handler
