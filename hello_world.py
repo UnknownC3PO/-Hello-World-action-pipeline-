@@ -1,5 +1,5 @@
 import json
-import requests
+from botocore.vendored import requests
 def lambda_handler(event,context):
     base_id="app1yGHzBsgY0VVBd"
     table_name="MainTable"
