@@ -21,9 +21,6 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-    - name: Hello World
-      run:
-            python ./hello_world.py
     - name: aws_cred
       uses: appleboy/lambda-action@master
       with:
