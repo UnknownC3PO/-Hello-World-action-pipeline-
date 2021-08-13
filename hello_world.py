@@ -11,7 +11,7 @@ airtable_response = json.loads(r.data.decode('utf-8'))
 z=[]
 for i in airtable_response["records"]:
     z.append(i["fields"]["title"])
-print(z)
+#print(z)
 #gen=[]
 def lambda_handler(event, context):
     while time.time()!=0:
@@ -21,5 +21,5 @@ def lambda_handler(event, context):
             z.insert(0,gen[0])
             gen=[]
             time.sleep(1)
-            print(z[0:3])
+            #print(z[0:3])
             return z
