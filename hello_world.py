@@ -13,5 +13,5 @@ def lambda_handler(event, context):
                     fields={"api_key":api_key})
     airtable_response = json.loads(r.data.decode('utf-8'))
     z=[i["title"] for i in (sorted([i["fields"] for i in airtable_response["records"]],key=lambda i:i["ID"]))]
-    return *z[int(time.time())%len(z):]+z[:int(time.time())%len(z)]
+    return z[int(time.time())%len(z):]+z[:int(time.time())%len(z)]
     
