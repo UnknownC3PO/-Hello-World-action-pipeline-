@@ -15,4 +15,4 @@ def lambda_handler(event, context):
     z = []
     for record in airtable_response["records"]:
         z.append(record["fields"]["title"])
-    return z[int(time.time())%len(z)]
+    return z[int(time.time())%len(z):]+z[:int(time.time())]
