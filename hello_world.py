@@ -13,11 +13,12 @@ for i in airtable_response["records"]:
     z.append(i["fields"]["title"])
 print(z)
 gen=[]
-def lambda_handler(main,context):
+def lambda_handler(event, context):
     while time.time()!=0:
         for i in range(len(z)):
             gen.append(z.pop(-1))
             z.insert(0,gen[0])
             gen=[]
             time.sleep(1)
-            return z[0:3]
+            print(z[0:3])
+            return z
