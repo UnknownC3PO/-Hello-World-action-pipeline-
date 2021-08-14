@@ -15,5 +15,5 @@ def lambda_handler(event, context):
     try:
         z=[i["title"] for i in (sorted([i["fields"] for i in airtable_response["records"]],key=lambda i:i["ID"]))]
         return z[int(time.time())%len(z):]+z[:int(time.time())%len(z)]
-    exept:
+    except:
         'z is empty'
